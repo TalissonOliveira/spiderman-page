@@ -8,6 +8,14 @@
     margin: 0 auto;
     padding: 8px 16px;
 
+    overflow: unset;
+
+    @include responsive() {
+        flex-direction: column;
+        height: auto;
+        overflow: hidden;
+
+    }
 }
 
 .container-item-1 {
@@ -33,9 +41,53 @@
     width: auto;
 }
 
+.bg-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        background: linear-gradient(110deg, #0A0C10 25%, rgba(11, 12, 16, 0.8) 50%, #0A0C10 70%);
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.svg-lines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+}
+
 .spiderman {
     width: 140%;
     transform: translate3d(-170px, 0, 0);
+
+    @include responsive() {
+        width: 100%;
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 .btn {

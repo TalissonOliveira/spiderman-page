@@ -5,6 +5,12 @@
     font-family: 'Mukta', sans-serif;
 }
 
+@mixin responsive() {
+    @media screen and (max-width: 960px) {
+        @content;
+    }
+}
+
 @import 'partials/colors';
 
 body {

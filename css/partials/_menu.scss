@@ -24,6 +24,10 @@ header {
     li {
         margin-left: 24px;
     }
+
+    @include responsive() {
+        display: none;
+    }
 }
 
 .logo {
@@ -86,5 +90,22 @@ header {
                 transform: translate3d(0, -3px ,0);
             }
         }
+    }
+
+    @include responsive() {
+        display: none;
+    }
+}
+
+.bx {
+    display: none;
+
+    @include responsive() {
+        display: block;
+        background-color: $white;
+        width: 48px;
+        height: 48px;
+    
+        border-radius: 8px;
     }
 }
