@@ -1,0 +1,52 @@
+.logo-spiderman {
+    fill: transparent;
+
+    animation: logo-spiderman 12s ease infinite alternate;
+}
+
+@keyframes logo-spiderman {
+    0% {
+        stroke-width: 0;
+        stroke-dasharray: 1 100;
+        fill: transparent;
+        opacity: 0;
+    }
+    25% {
+        stroke-width: 0.7;
+        stroke-dasharray: 100 0;
+        fill: transparent;
+    }
+    60%, 100% {
+        stroke-width: .3;
+        fill: $white-dark;
+        opacity: 1;
+    }
+    
+}
+
+.line1 {
+    animation: moveline 6s ease infinite alternate;
+}
+
+.line2 {
+    animation: moveline 7s ease .5s infinite alternate;
+}
+
+.line3 {
+    animation: moveline 8s ease .7s infinite alternate;
+}
+
+.line4 {
+    animation: moveline 5s ease .3s infinite alternate;
+}
+
+@keyframes moveline {
+    0% {
+        stroke-dasharray: 270 50;
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dasharray: 500 10;
+        stroke-dashoffset: 1000;
+    }
+}
